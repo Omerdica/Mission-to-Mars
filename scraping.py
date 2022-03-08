@@ -118,7 +118,7 @@ def hemisphere_data(browser):
         html1 = browser.html
         #html_soup = soup(html1, 'html.parser')
         browser.visit(url)
-        browser.find_by_css('a.product-item h3')[x].click()
+        browser.find_by_css('div.item h3')[x].click()
            
               
         try:

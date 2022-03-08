@@ -279,10 +279,10 @@ for x in range(4):
         html1 = browser.html
         html_soup = soup(html1, 'html.parser')
         browser.visit(url)
-        browser.find_by_css('a.product-item h3')[x].click()
+        browser.find_by_css('div.item h3')[x].click()
         site_url = browser.find_by_text("Sample").first
         img_url = site_url['href']
-        title = browser.find_by_css("h2.title").text
+        title = browser.find_by_css("h2.title")
         
         keys =['img_url', 'title']
         values = [img_url, title]
